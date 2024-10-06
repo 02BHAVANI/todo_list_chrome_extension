@@ -46,6 +46,11 @@ This is a simple **Todo List Chrome Extension** built using **React**. It allows
 - Chrome Storage API
 - HTML, CSS, JavaScript
 
+## Message
+
+**More features to be implemented soon! Stay tuned!**
+
+
 ## Contributing
 Feel free to fork this repository and submit pull requests for any improvements or new features.
 
