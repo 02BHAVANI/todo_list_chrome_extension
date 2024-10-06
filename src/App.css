@@ -1,38 +1,94 @@
 .App {
   text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-container {
+  width: 300px; /* Adjust the width of the popup */
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  max-width: 400px; /* Limit max width for larger screens */
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff4d4d; /* Red color for the buttons */
   color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s; /* Add transition for hover effect */
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #ff6666;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+li:hover {
+  background-color: #f1f1f1; /* Change background on hover */
+}
+
+li button {
+  width: auto;
+  background-color: #ff4d4d;
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+
+li button:hover {
+  background-color: #ff6666;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .todo-container {
+    width: 90%; /* Make the container adapt to smaller screens */
   }
-  to {
-    transform: rotate(360deg);
+
+  input[type="text"] {
+    width: 100%; /* Ensure input is full-width on smaller screens */
+  }
+
+  button {
+    width: 100%; /* Make buttons full-width on smaller screens */
+    margin-top: 10px; /* Space out buttons on small screens */
   }
 }
